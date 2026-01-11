@@ -18,6 +18,7 @@ public class Task {
     private String description;
 
     @Column(length = 100)
+    @Enumerated(EnumType.STRING) // Anotação para que no banco de dados seja salvo como uma ‘string’!
     private StatusTask status;
 
     public Task(String title, String description, StatusTask status) {
